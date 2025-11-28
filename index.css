@@ -173,6 +173,35 @@ h1 {
 
 .welcome-section .philosophy-group img {
     margin: 10px;
-    width: 200px;
+    width: 300px;
     height: auto;
+}
+
+.welcome-section .philosophy-group p {
+    font-size: 20px;
+    color: snow;
+    font-family: "Open Sans";
+    margin: 10px;
+    width: 500px;
+    height: auto;
+}
+
+/* Footer */
+.site-footer {
+    background:#222;  
+    color:snow;
+    font-family: "Genos";
+}
+.site-footer .footer-inner {
+    display:flex; 
+    justify-content: center; 
+    gap:1rem; 
+    flex-wrap:wrap; 
+    align-items:flex-start;
+}
+
+.site-footer small { 
+    display:block; 
+    margin-top:1rem; 
+    color:#aaa;
 }

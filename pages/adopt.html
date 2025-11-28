@@ -1,0 +1,250 @@
+// ...existing code...
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loved Pets Animal Shelter - Adopt</title>
+    <link rel="stylesheet" href="../index.css" type="text/css" />
+
+    <!-- Genos + Della Respira Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Della+Respira&family=Genos:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+
+    <!-- Small page styles -->
+    <style>
+        :root {
+            --accent: #8FBC59;
+            --bg: snow;
+            --text: #222;
+        }
+
+        main.adopt-main {
+            padding: 1.5rem;
+            background: var(--bg);
+            min-height: calc(100vh - 5em);
+            font-family: "Open Sans", system-ui, sans-serif;
+            color: var(--text);
+        }
+
+        .adopt-intro {
+            max-width: 900px;
+            margin: 0 auto 1rem;
+            text-align: center;
+        }
+
+        .adopt-intro p {
+            margin-top: 0.5rem;
+        }
+
+        .adopt-grid {
+            max-width: 1100px;
+            margin: 1rem auto 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+        }
+
+        .animal-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 0.75rem;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .animal-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .animal-meta {
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        .animal-meta dt {
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .animal-card p.details {
+            margin: 0.25rem 0 0.5rem;
+            color: #333;
+            flex: 1;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: flex-end;
+        }
+
+        .btn {
+            background: var(--accent);
+            color: snow;
+            border: none;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .btn.secondary {
+            background: #f0f0f0;
+            color: var(--text);
+            border: 1px solid #e0e0e0;
+        }
+
+        @media (max-width:640px) {
+            .animal-card img { height: 160px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Nav Bar -->
+    <header class="header">
+        <div class="left-side">
+            <img src="../images/logo.png" alt="Loved Pets logo" />
+            <h1>Loved Pets Animal Shelter</h1>
+        </div>
+        <div class="right-side">
+            <a href="../index.html">Home</a>
+            <a href="adopt.html">Adopt</a>
+            <a href="volunteer.html">Volunteer</a>
+        </div>
+    </header>
+
+    <main class="adopt-main" aria-labelledby="adopt-heading">
+        <section class="adopt-intro">
+            <h1 id="adopt-heading">Animals currently available for adoption</h1>
+            <p>
+                To inquire about any of the animals below, call
+                <a href="tel:+15554762984">(555) 476-2984</a> or email
+                <a href="mailto:josie@welovepets.com">josie@welovepets.com</a>
+            </p>
+        </section>
+
+        <section class="adopt-grid" aria-live="polite">
+            <!-- Card: Jack and Annie -->
+            <article class="animal-card">
+                <h3>Jack and Annie</h3>
+                <img src="../images/jack_annie.jpg" alt="Jack and Annie playing together" />
+                <dl class="animal-meta">
+                    <dt>Breed / Gender</dt>
+                    <dd>Brother & sister mix — male & female</dd>
+                    <dt>Age</dt>
+                    <dd>6 weeks</dd>
+                </dl>
+                <p class="details">Jack and Annie are playful and adorable!</p>
+                <div class="card-actions">
+                    <a class="btn" href="mailto:josie@welovepets.com?subject=Inquiry%20about%20Jack%20and%20Annie">Inquire</a>
+                </div>
+            </article>
+
+            <!-- Card: Cocoa -->
+            <article class="animal-card">
+                <h3>Cocoa</h3>
+                <img src="../images/cocoa.jpg" alt="Cocoa the chocolate lab" />
+                <dl class="animal-meta">
+                    <dt>Breed / Gender</dt>
+                    <dd>Chocolate Labrador — female</dd>
+                    <dt>Age</dt>
+                    <dd>20 weeks</dd>
+                </dl>
+                <p class="details">Cocoa is sweet as pie and loves to give kisses.</p>
+                <div class="card-actions">
+                    <a class="btn" href="mailto:josie@welovepets.com?subject=Inquiry%20about%20Cocoa">Inquire</a>
+                </div>
+            </article>
+
+            <!-- Card: Sam -->
+            <article class="animal-card">
+                <h3>Sam</h3>
+                <img src="../images/sam.jpg" alt="Sam the orange mix cat" />
+                <dl class="animal-meta">
+                    <dt>Breed / Gender</dt>
+                    <dd>Orange mix — male</dd>
+                    <dt>Age</dt>
+                    <dd>3 years</dd>
+                </dl>
+                <p class="details">Sam is a calm kitty great with children and other animals, but not with dogs.</p>
+                <div class="card-actions">
+                    <a class="btn" href="mailto:josie@welovepets.com?subject=Inquiry%20about%20Sam">Inquire</a>
+                </div>
+            </article>
+
+            <!-- Card: Roscoe -->
+            <article class="animal-card">
+                <h3>Roscoe</h3>
+                <img src="../images/roscoe.jpg" alt="Roscoe the corgi-chihuahua mix" />
+                <dl class="animal-meta">
+                    <dt>Breed / Gender</dt>
+                    <dd>Corgi / Chihuahua mix — male</dd>
+                    <dt>Age</dt>
+                    <dd>8 years</dd>
+                </dl>
+                <p class="details">Roscoe is an older, house trained dog surrendered by his owner. He is ready for a home!</p>
+                <div class="card-actions">
+                    <a class="btn" href="mailto:josie@welovepets.com?subject=Inquiry%20about%20Roscoe">Inquire</a>
+                </div>
+            </article>
+
+            <!-- Card: Sheldon -->
+            <article class="animal-card">
+                <h3>Sheldon</h3>
+                <img src="../images/sheldon.jpg" alt="Sheldon the box turtle" />
+                <dl class="animal-meta">
+                    <dt>Breed / Gender</dt>
+                    <dd>Box turtle — male</dd>
+                    <dt>Age</dt>
+                    <dd>1 year</dd>
+                </dl>
+                <p class="details">Sheldon likes to sit in the sun, and doesn’t bite!</p>
+                <div class="card-actions">
+                    <a class="btn" href="mailto:josie@welovepets.com?subject=Inquiry%20about%20Sheldon">Inquire</a>
+                </div>
+            </article>
+
+            <!-- Card: Jellybean -->
+            <article class="animal-card">
+                <h3>Jellybean</h3>
+                <img src="../images/jellybean.jpg" alt="Jellybean the gray tabby" />
+                <dl class="animal-meta">
+                    <dt>Breed / Gender</dt>
+                    <dd>Gray tabby — female</dd>
+                    <dt>Age</dt>
+                    <dd>2 years</dd>
+                </dl>
+                <p class="details">Jellybean was found in a storm drain, but loves people.</p>
+                <div class="card-actions">
+                    <a class="btn" href="mailto:josie@welovepets.com?subject=Inquiry%20about%20Jellybean">Inquire</a>
+                </div>
+            </article>
+
+            <!-- Card: Greyson -->
+            <article class="animal-card">
+                <h3>Greyson</h3>
+                <img src="../images/greyson.jpg" alt="Greyson the gray mix puppy" />
+                <dl class="animal-meta">
+                    <dt>Breed / Gender</dt>
+                    <dd>Gray mix — male</dd>
+                    <dt>Age</dt>
+                    <dd>10 weeks</dd>
+                </dl>
+                <p class="details">Greyson is high energy and high cuddles!</p>
+                <div class="card-actions">
+                    <a class="btn" href="mailto:josie@welovepets.com?subject=Inquiry%20about%20Greyson">Inquire</a>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
+// ...existing code...
